@@ -1,0 +1,7 @@
+if [ "$#" -ne 1 ]; then
+    echo "Usage:"
+    echo "$0 <session>"
+    exit
+fi
+curl -H "Authentication: $1" -X POST http://localhost/account/logout
+echo ""

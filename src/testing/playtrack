@@ -1,0 +1,12 @@
+if [ "$#" -eq 2 ]; then
+    curl --data-urlencode "uri=$2" -H "Authentication: $1" -X POST http://localhost/playback/playtrack
+    echo ""
+    exit
+fi
+if [ "$#" -eq 3 ]; then
+    curl --data-urlencode "uri=$2" --data-urlencode "timestamp=$3" -H "Authentication: $1" -X POST http://localhost/playback/playtrack
+    echo ""
+    exit
+fi
+echo "Usage:"
+echo "$0 <session> <uri> (<timestamp>)"

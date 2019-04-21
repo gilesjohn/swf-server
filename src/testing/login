@@ -1,0 +1,8 @@
+#!/bin/bash
+if [ "$#" -ne 2 ]; then
+    echo "Usage:"
+    echo "$0 <username> <password>"
+    exit
+fi
+curl -d "username=$1&password=$2" -X POST http://localhost/account/login
+echo ""

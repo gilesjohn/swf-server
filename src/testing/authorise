@@ -1,0 +1,2 @@
+curl -d 'redirect=blank' -H "Authentication: $1" -X POST http://localhost/account/authorise
+echo ""

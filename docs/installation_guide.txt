@@ -1,0 +1,12 @@
+Installation guide:
+
+Put the contents of public_html at the web root of an apache2 site
+Put the lib folder in the directory containing the web root of that site
+Enable mod header and rewrite for this site
+Allow .htaccess files to be used for this site
+Create a database and a user for it
+Run docs/swf.sql in the created database
+Put the database name, user and password in lib/conf.php
+While in lib/conf.php put your client id and secret, edit the callback url to the sites url
+Create users with register.php then delete it to remove open registration
+Run lib/sync-start when you start the server and lib/sync-stop when you stop the server

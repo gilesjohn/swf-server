@@ -1,0 +1,7 @@
+if [ "$#" -ne 2 ]; then
+    echo "Usage:"
+    echo "$0 <session> <friend username>"
+    exit
+fi
+curl -H "Authentication: $1" -X POST http://localhost/friends/$2/add
+echo ""

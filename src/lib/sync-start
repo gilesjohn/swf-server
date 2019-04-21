@@ -1,0 +1,8 @@
+#!/bin/bash
+if pgrep swf-syncjob >/dev/null
+then
+	echo "SWF syncing already running, try using sync-stop"
+	exit 1
+else
+	nohup ./swf-syncjob &>/dev/null &
+fi
